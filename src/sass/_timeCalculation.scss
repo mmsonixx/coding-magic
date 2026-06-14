@@ -1,0 +1,155 @@
+.calculator-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+body.dark-mode .calculator-container {
+    background-color: #1a1a1a;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.839);
+   
+}
+
+.calcylation_title {
+    font-weight: 400;
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+body.dark-mode .calcylation_title {
+    color: #ffffff;
+
+}
+
+.calc-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    background: #cdcdcd;
+    border-radius: 25px;
+    padding: 2px 2px 2px 15px;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1), 2px 2px 5px rgba(0, 0, 0, 0.1);
+    
+
+}
+body.dark-mode .search-box {
+  background: #000000;
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.839);
+
+}
+
+
+.search-box input {
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    color: #555;
+    outline: none;
+    width: 120px;
+border-radius: 20px 20px 20px 20px;
+}
+
+body.dark-mode .search-box input {
+    background: #ffffff;
+    
+}
+
+.search-box input::placeholder {
+    color: #777;
+}
+
+.search-box button {
+    background: #000;
+    border: none;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+}
+
+.search-box button:hover {
+    background: #222;
+}
+
+.search-box button svg {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+}
+
+.divider {
+    border-bottom: 2px dotted #999;
+    width: 60px;
+    height: 1px;
+}
+
+.result {
+    font-size: 18px;
+    color: #000;
+    font-weight: 500;
+    min-width: 120px;
+    text-align: left;
+}
+body.dark-mode .result {
+    color: #ffffff;
+
+}
+
+
+
+.search-box {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 250px;
+}
+
+#secondsInput {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: #d3d3d3;
+border-radius: 20px 20px 20px 20px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+#calcBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #000000;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#calcBtn svg {
+    width: 24px;
+    height: 24px;
+    fill: #ffffff;
+}
