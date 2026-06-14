@@ -1,0 +1,72 @@
+:root {
+  --font-family: "Montserrat Alternates", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --third-family: "Sacramento", sans-serif;
+}
+ #game-footer {
+        display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+ .footer-button {
+    border-radius: 20px;
+padding: 10px;
+width: 107px;
+height: 35px;
+background: #000;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+color: #fff;
+ }
+  .footer-button:hover {
+    border-radius: 20px;
+padding: 10px;
+width: 107px;
+height: 35px;
+background: gray;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+color: #000;
+ }
+ .footer-text {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 6px;
+color: #000;
+
+
+ }
+ .footer-input {
+border-radius: 20px;
+padding: 10px 80px 10px 10px;
+width: 204px;
+height: 35px;
+background: #d7d7d7;
+font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+color: #7e7e7e;
+ }
+ .footer-item {
+    font-family: var(--font-family);
+font-weight: 400;
+font-size: 12px;
+line-height: 170%;
+color: #000;
+ }
+ .footer-sub {
+    display: flex;
+    gap: 30px;
+ }
+ .footer-sub-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+ }
+
+ .footer-svg {
+    width: 165px;
+    height: 70px;
+ }
