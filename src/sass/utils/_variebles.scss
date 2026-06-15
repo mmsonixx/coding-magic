@@ -1,0 +1,14 @@
+:root {
+    --colorText: #000;
+    --textColor:  #fff;
+    --correctText: #039900;
+    --inCorrectText: #990000;
+    --colorTextInput: #7e7e7e;
+   --backgroundInput: #d7d7d7;
+   --background: #d9d9d9;
+   --colorBackgrondBody: #fff;
+}
+[data-theme= 'dark'] {
+ --colorText: #fff;
+    --colorBackgrondBody: #1C1C1C;  
+}
