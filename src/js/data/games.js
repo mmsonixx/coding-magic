@@ -1,3 +1,5 @@
+import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
+
 export const games = [
   {
     id: 1,
@@ -13,6 +15,7 @@ export const games = [
     id: 3,
     name: 'Камінь-Ножиці-Папір',
     category: 'game',
+    init: initGameRockPaperScissors,
   },
   {
     id: 4,
