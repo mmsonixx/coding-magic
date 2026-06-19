@@ -1,5 +1,15 @@
-@import './common';
-@import './reset';
-@import './header';
-@import './footer';
+@import './base/common';
+@import './base/reset';
+@import './utils/variebles';
 @import './modalWindow';
+@import './components/header';
+@import './components/gameRockPaperScissors';
+@import './components/footer';
+
+
+
+
+
+
+
+
