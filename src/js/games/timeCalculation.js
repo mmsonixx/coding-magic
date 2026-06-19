@@ -13,7 +13,6 @@ if (savedTheme == 'dark') {
   document.body.classList.add('dark-mode');
   themeToggle.checked = true;
 }
-
 themeToggle.onchange = function () {
   if (themeToggle.checked == true) {
     document.body.classList.add('dark-mode');
