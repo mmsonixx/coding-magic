@@ -1,0 +1,103 @@
+.calculator-container {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    background: #ffffff;
+    padding: 30px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    max-width: 1000px;
+    margin: 20px auto;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+[data-theme='dark'] .calculator-container {
+    background: var(--colorBackgrondBody); 
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.1);
+}
+
+.calcylation_title {
+    font-weight: 400;
+    color: var(--colorText);
+    margin-bottom: 30px;
+    font-size: 24px;
+    transition: color 0.3s;
+}
+
+.calc-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    width: 250px;
+}
+
+#secondsInput {
+    width: 100%;
+    padding: 12px 50px 12px 15px;
+    font-size: 16px;
+    border: none;
+    background-color: var(--backgroundInput);
+    border-radius: 20px;
+    outline: none;
+    box-sizing: border-box;
+    color: #000;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+[data-theme='dark'] #secondsInput {
+    background-color: var(--colorTextInput);
+    color: var(--textColor);
+}
+
+#secondsInput::placeholder {
+    color: #777;
+    transition: color 0.3s;
+}
+
+[data-theme='dark'] #secondsInput::placeholder {
+    color: var(--backgroundInput);
+}
+
+#calcBtn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #000000;
+    border: none;
+    border-radius: 0 20px 20px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+#calcBtn svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--textColor);
+}
+
+.divider {
+    border-bottom: 2px dotted var(--colorTextInput);
+    width: 60px;
+    height: 1px;
+}
+
+.result {
+    font-size: 18px;
+    color: var(--colorText);
+    font-weight: 500;
+    min-width: 120px;
+    text-align: left;
+    transition: color 0.3s;
+}
