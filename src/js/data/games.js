@@ -1,4 +1,5 @@
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
+import { initCalc } from "../games/calc.js";
 
 export const games = [
   {
@@ -21,6 +22,7 @@ export const games = [
     id: 4,
     name: 'Калькулятор',
     category: 'numerical',
+    init: initCalc,
   },
   {
     id: 5,
