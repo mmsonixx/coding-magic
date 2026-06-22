@@ -68,7 +68,7 @@ const createHtml = obj => {
           </button>
         </div>
 
-        <div class="divider"></div>
+        <div class="divder"></div>
 
         <div class="result" id="timeResult">
           0 дн. 00:00:00
