@@ -16,19 +16,19 @@ export function initGameRockPaperScissors() {
             <ul class="rps__list">
               <li class="rps__item" data-choice="stone">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-stone"></use>
+                  <use href="#icon-stone"></use>
                 </svg>
               </li>
 
               <li class="rps__item" data-choice="scissors">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-scissors"></use>
+                  <use href="#icon-scissors"></use>
                 </svg>
               </li>
 
               <li class="rps__item" data-choice="paper">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-paper"></use>
+                  <use href="#icon-paper"></use>
                 </svg>
               </li>
             </ul>
