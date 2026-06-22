@@ -13,11 +13,11 @@
 padding: 10px;
 width: 107px;
 height: 35px;
-background: #000;
+background: var(--colorText);
 font-family: var(--font-family);
 font-weight: 400;
 font-size: 12px;
-color: #fff;
+color: var(--textColor);
  }
   .footer-button:hover {
     border-radius: 20px;
@@ -28,13 +28,13 @@ background: gray;
 font-family: var(--font-family);
 font-weight: 400;
 font-size: 12px;
-color: #000;
+color: var(--colorText);
  }
  .footer-text {
     font-family: var(--font-family);
 font-weight: 400;
 font-size: 6px;
-color: #000;
+color: var(--colorText);
 
 
  }
@@ -43,7 +43,7 @@ border-radius: 20px;
 padding: 10px 80px 10px 10px;
 width: 204px;
 height: 35px;
-background: #d7d7d7;
+background: var(--backgroundInput);
 font-family: var(--font-family);
 font-weight: 400;
 font-size: 12px;
@@ -54,7 +54,7 @@ color: #7e7e7e;
 font-weight: 400;
 font-size: 12px;
 line-height: 170%;
-color: #000;
+color: var(--colorText);
  }
  .footer-sub {
     display: flex;
