@@ -8,19 +8,19 @@ var e;let t=document.querySelector(".MD-overlay"),u=document.querySelector(".mod
             <ul class="rps__list">
               <li class="rps__item" data-choice="stone">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-stone"></use>
+                  <use href="#icon-stone"></use>
                 </svg>
               </li>
 
               <li class="rps__item" data-choice="scissors">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-scissors"></use>
+                  <use href="#icon-scissors"></use>
                 </svg>
               </li>
 
               <li class="rps__item" data-choice="paper">
                 <svg class="rps__icon">
-                  <use href="./images/icons/symbol-defs.svg#icon-paper"></use>
+                  <use href="#icon-paper"></use>
                 </svg>
               </li>
             </ul>
@@ -100,5 +100,5 @@ var e;let t=document.querySelector(".MD-overlay"),u=document.querySelector(".mod
       </div>
     </div></div>
    
-  `,g?g.innerHTML=e:console.log("Упс! Немає такого контейнера");let b=document.getElementById("calcBtn"),_=document.getElementById("secondsInput");function h(){let e=parseInt(_.value,10);if(isNaN(e)||e<0){document.getElementById("timeResult").textContent="0 дн. 00:00:00";return}let t=Math.floor(e/86400),u=e%86400,c=Math.floor(u/3600),n=Math.floor((u%=3600)/60),s=u%60;c<10&&(c="0"+c),n<10&&(n="0"+n),s<10&&(s="0"+s),document.getElementById("timeResult").textContent=t+" дн. "+c+":"+n+":"+s}b&&_&&(b.onclick=function(){h()},_.onkeypress=function(e){"Enter"==e.key&&h()});
-//# sourceMappingURL=coding-magic.a0391760.js.map
+  `,g?g.innerHTML=e:console.log("Упс! Немає такого контейнера");let _=document.getElementById("calcBtn"),h=document.getElementById("secondsInput");function b(){let e=parseInt(h.value,10);if(isNaN(e)||e<0){document.getElementById("timeResult").textContent="0 дн. 00:00:00";return}let t=Math.floor(e/86400),u=e%86400,c=Math.floor(u/3600),n=Math.floor((u%=3600)/60),s=u%60;c<10&&(c="0"+c),n<10&&(n="0"+n),s<10&&(s="0"+s),document.getElementById("timeResult").textContent=t+" дн. "+c+":"+n+":"+s}_&&h&&(_.onclick=function(){b()},h.onkeypress=function(e){"Enter"==e.key&&b()});
+//# sourceMappingURL=coding-magic.6ddf46fd.js.map
