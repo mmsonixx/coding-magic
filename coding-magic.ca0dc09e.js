@@ -92,7 +92,7 @@ var e;let t=document.querySelector(".MD-overlay"),u=document.querySelector(".mod
           </button>
         </div>
 
-        <div class="divider"></div>
+        <div class="divder"></div>
 
         <div class="result" id="timeResult">
           0 \u{434}\u{43D}. 00:00:00
@@ -101,4 +101,4 @@ var e;let t=document.querySelector(".MD-overlay"),u=document.querySelector(".mod
     </div></div>
    
   `,g?g.innerHTML=e:console.log("Упс! Немає такого контейнера");let _=document.getElementById("calcBtn"),h=document.getElementById("secondsInput");function b(){let e=parseInt(h.value,10);if(isNaN(e)||e<0){document.getElementById("timeResult").textContent="0 дн. 00:00:00";return}let t=Math.floor(e/86400),u=e%86400,c=Math.floor(u/3600),n=Math.floor((u%=3600)/60),s=u%60;c<10&&(c="0"+c),n<10&&(n="0"+n),s<10&&(s="0"+s),document.getElementById("timeResult").textContent=t+" дн. "+c+":"+n+":"+s}_&&h&&(_.onclick=function(){b()},h.onkeypress=function(e){"Enter"==e.key&&b()});
-//# sourceMappingURL=coding-magic.6ddf46fd.js.map
+//# sourceMappingURL=coding-magic.ca0dc09e.js.map
