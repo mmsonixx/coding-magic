@@ -8,32 +8,34 @@ dropdownButton.onclick = function () {
   dropdownMenu.classList.toggle('is-open');
 };
 
-const savedTheme = localStorage.getItem('theme');
-if (savedTheme == 'dark') {
-  document.body.classList.add('dark-mode');
-  themeToggle.checked = true;
-}
-themeToggle.onchange = function () {
-  if (themeToggle.checked == true) {
-    document.body.classList.add('dark-mode');
-    localStorage.setItem('theme', 'dark');
+const themToggle = document.querySelector('.theme-toggle__input');
+
+themeToggle.addEventListener('change', e => {
+  if (e.target.checked) {
+    document.body.setAttribute('data-theme', 'dark');
   } else {
-    document.body.classList.remove('dark-mode');
-    localStorage.setItem('theme', 'light');
+    document.body.removeAttribute('data-theme');
   }
-};
+});
 
+const myInput = document.querySelector('.MD-logIn-input1');
 const userGreeting = document.getElementById('userGreeting');
-let userName = localStorage.getItem('userName');
 
-if (!userName) {
-  userName = prompt('Будь ласка, введіть свій нікнейм:');
-  if (userName || userName.trim() == '') {
-    userName = 'Гість';
+let savedName = 'Гість';
+
+userGreeting.textContent = 'Вітаємо, ' + savedName + '!';
+myInput.value = '';
+
+myInput.addEventListener('input', function () {
+  let currentName = myInput.value;
+
+  if (currentName == '') {
+    currentName = 'Гість';
   }
-  localStorage.setItem('userName', userName);
-}
-userGreeting.textContent = 'Вітаємо, ' + userName + '!';
+
+  userGreeting.textContent = 'Вітаємо, ' + currentName + '!';
+  localStorage.setItem('userName', currentName);
+});
 
 const container = document.querySelector('#game-5');
 
