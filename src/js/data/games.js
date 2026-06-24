@@ -1,5 +1,6 @@
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
 import { initCalc } from "../games/calc.js";
+import { initGuessScientist } from "../games/guessScientist.js";
 
 export const games = [
   {
@@ -53,5 +54,6 @@ export const games = [
     id: 10,
     name: 'Вчений',
     category: 'acquaintance',
+    init: initGuessScientist,
   },
 ];
