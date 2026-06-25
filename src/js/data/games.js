@@ -1,5 +1,5 @@
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
-
+import { initDinoGmae } from "../games/dinoGame.js";
 export const games = [
   {
     id: 1,
@@ -31,6 +31,7 @@ export const games = [
     id: 6,
     name: 'Google динозаврик',
     category: 'game',
+    init: initDinoGmae
   },
   {
     id: 7,
