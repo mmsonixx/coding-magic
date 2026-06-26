@@ -18,7 +18,7 @@
   height: 316px;
   display: flex;
   justify-content: center;
-  background-color: white;
+  background-color: var(--colorBackgrondBody);
   opacity: 1;
   border-radius: 20px;
   display: none;
@@ -120,7 +120,7 @@
 .MD-thanks {
   width: 463px;
   height: 245px;
-  background-color: white;
+  background-color: var(--colorBackgrondBody);
   border-radius: 20px;
   margin-top: 154px;
   display: none;
@@ -146,7 +146,7 @@
   line-height: 24px;
   text-align: center;
 
-  color: #000000;
+  color: var(--colorText);
 }
 .MD-thanks-cross {
   position: absolute;
