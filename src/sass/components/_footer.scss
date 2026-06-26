@@ -5,70 +5,175 @@
 }
  #game-footer {
         display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+
+    @media screen and (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+      justify-items: center;
+      gap: 30px;
+      padding: 30px 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 40px 0;
+      gap: 40px;
+    }
  }
  .footer-button {
     border-radius: 20px;
-padding: 10px;
-width: 107px;
-height: 35px;
-background: var(--colorText);
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 12px;
-color: var(--buttontTextColor);
+	padding: 10px;
+	width: 107px;
+	height: 35px;
+	background: var(--colorText);
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	color: var(--buttontTextColor);
+
+	@media screen and (min-width: 768px) {
+	  padding: 12px;
+	  width: 120px;
+	  height: 40px;
+	  font-size: 14px;
+	}
+
+	@media screen and (min-width: 1200px) {
+	  padding: 14px;
+	  width: 140px;
+	  height: 45px;
+	  font-size: 16px;
+	}
  }
   .footer-button:hover {
     border-radius: 20px;
-padding: 10px;
-width: 107px;
-height: 35px;
-background: gray;
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 12px;
-color: var(--colorText);
+	padding: 10px;
+	width: 107px;
+	height: 35px;
+	background: gray;
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	color: var(--colorText);
+
+	@media screen and (min-width: 768px) {
+	  padding: 12px;
+	  width: 120px;
+	  height: 40px;
+	  font-size: 14px;
+	}
+
+	@media screen and (min-width: 1200px) {
+	  padding: 14px;
+	  width: 140px;
+	  height: 45px;
+	  font-size: 16px;
+	}
  }
  .footer-text {
     font-family: var(--font-family);
-font-weight: 400;
-font-size: 6px;
-color: var(--colorText);
+	font-weight: 400;
+	font-size: 6px;
+	color: var(--colorText);
 
+	@media screen and (min-width: 768px) {
+	  font-size: 8px;
+	}
 
+	@media screen and (min-width: 1200px) {
+	  font-size: 10px;
+	}
  }
  .footer-input {
-border-radius: 20px;
-padding: 10px 80px 10px 10px;
-width: 204px;
-height: 35px;
-background: var(--backgroundInput);
-font-family: var(--font-family);
-font-weight: 400;
-font-size: 12px;
-color: #7e7e7e;
+	border-radius: 20px;
+	padding: 10px 80px 10px 10px;
+	width: 204px;
+	height: 35px;
+	background: var(--backgroundInput);
+	font-family: var(--font-family);
+	font-weight: 400;
+	font-size: 12px;
+	color: #7e7e7e;
+
+	@media screen and (min-width: 768px) {
+	  padding: 12px 100px 12px 12px;
+	  width: 250px;
+	  height: 40px;
+	  font-size: 14px;
+	}
+
+	@media screen and (min-width: 1200px) {
+	  padding: 14px 120px 14px 14px;
+	  width: 300px;
+	  height: 45px;
+	  font-size: 16px;
+	}
  }
  .footer-item {
     font-family: var(--font-family);
-font-weight: 400;
-font-size: 12px;
-line-height: 170%;
-color: var(--colorText);
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 170%;
+	color: var(--colorText);
+
+	@media screen and (min-width: 768px) {
+	  font-size: 14px;
+	}
+
+	@media screen and (min-width: 1200px) {
+	  font-size: 16px;
+	}
  }
  .footer-sub {
     display: flex;
     gap: 30px;
+
+    @media screen and (min-width: 768px) {
+      gap: 40px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 50px;
+    }
  }
  .footer-sub-wrapper {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    align-items: center;
+
+    @media screen and (min-width: 768px) {
+      gap: 15px;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      gap: 20px;
+      align-items: flex-start;
+    }
  }
 
  .footer-svg {
     width: 165px;
-    height: 70px;
+	height: 70px;
       fill: var(--colorText);
         color: var(--colorText);
+
+	@media screen and (min-width: 768px) {
+	  width: 200px;
+	  height: 85px;
+	}
+
+	@media screen and (min-width: 1200px) {
+	  width: 240px;
+	  height: 100px;
+	}
  }
