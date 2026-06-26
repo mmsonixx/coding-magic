@@ -7,8 +7,10 @@
    --backgroundInput: #d7d7d7;
    --background: #d9d9d9;
    --colorBackgrondBody: #fff;
+   --buttontTextColor: #fff;
 }
 [data-theme= 'dark'] {
  --colorText: #fff;
     --colorBackgrondBody: #1C1C1C;  
+       --buttontTextColor: #000;
 }
