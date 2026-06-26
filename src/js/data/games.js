@@ -1,12 +1,14 @@
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
 import { initCalc } from "../games/calc.js";
 import { initGuessScientist } from "../games/guessScientist.js";
+import { initLeapYearGame } from "../games/leapYearGame.js";
 
 export const games = [
   {
     id: 1,
     name: 'Високосний калькулятор',
     category: 'numerical',
+    init: initLeapYearGame,
   },
   {
     id: 2,
