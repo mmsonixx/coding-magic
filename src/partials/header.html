@@ -1,6 +1,8 @@
 <header class="header">
   <div class="container header__container">
-    <svg width="93px" heigth="38px" class="header_logo"><use href="#icon-logo"></use></svg>
+    <svg width="93px" heigth="38px" class="header_logo">
+      <use href="#icon-logo"></use>
+    </svg>
 
     <nav class="menu">
       <div class="dropdown">
@@ -25,9 +27,24 @@
         </button>
 
         <ul class="dropdown__list">
-          <li><a href="#" class="dropdown__link">Числовий</a></li>
-          <li><a href="#" class="dropdown__link">Ігровий</a></li>
-          <li><a href="#" class="dropdown__link">Ознайомчий</a></li>
+          <li>
+            <a href="#" class="dropdown__link" data-category="all"
+              >Всі розваги</a
+            >
+          </li>
+          <li>
+            <a href="#" class="dropdown__link" data-category="numerical"
+              >Числовий</a
+            >
+          </li>
+          <li>
+            <a href="#" class="dropdown__link" data-category="game">Ігровий</a>
+          </li>
+          <li>
+            <a href="#" class="dropdown__link" data-category="acquaintance"
+              >Ознайомчий</a
+            >
+          </li>
         </ul>
       </div>
 
