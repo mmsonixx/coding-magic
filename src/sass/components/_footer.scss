@@ -30,52 +30,52 @@
  }
  .footer-button {
     border-radius: 20px;
-	padding: 10px;
-	width: 107px;
-	height: 35px;
+	padding: 6px;
+	width: 100px;
+	height: 30px;
 	background: var(--colorText);
 	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 8px;
 	color: var(--buttontTextColor);
 
 	@media screen and (min-width: 768px) {
-	  padding: 12px;
-	  width: 120px;
-	  height: 40px;
-	  font-size: 14px;
+	  padding: 8px;
+	  width: 104px;
+	  height: 33px;
+	  font-size: 10px;
 	}
 
 	@media screen and (min-width: 1200px) {
-	  padding: 14px;
-	  width: 140px;
-	  height: 45px;
-	  font-size: 16px;
+padding: 10px;
+	width: 107px;
+	height: 35px;
+	  font-size: 12px;
 	}
  }
   .footer-button:hover {
     border-radius: 20px;
-	padding: 10px;
-	width: 107px;
-	height: 35px;
+padding: 6px;
+	width: 100px;
+	height: 30px;
 	background: gray;
 	font-family: var(--font-family);
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 8px;
 	color: var(--colorText);
 
 	@media screen and (min-width: 768px) {
-	  padding: 12px;
-	  width: 120px;
-	  height: 40px;
-	  font-size: 14px;
+padding: 8px;
+	width: 104px;
+	height: 33px;
+	  font-size: 10px;
 	}
 
 	@media screen and (min-width: 1200px) {
-	  padding: 14px;
-	  width: 140px;
-	  height: 45px;
-	  font-size: 16px;
+padding: 10px;
+	width: 107px;
+	height: 35px;
+	  font-size: 12px;
 	}
  }
  .footer-text {
@@ -93,10 +93,10 @@
 	}
  }
  .footer-input {
-	border-radius: 20px;
-	padding: 10px 80px 10px 10px;
-	width: 204px;
-	height: 35px;
+border-radius: 16px;
+padding: 6px 76px 6px 6px;
+width: 204px;
+height: 35px;
 	background: var(--backgroundInput);
 	font-family: var(--font-family);
 	font-weight: 400;
@@ -104,32 +104,32 @@
 	color: #7e7e7e;
 
 	@media screen and (min-width: 768px) {
-	  padding: 12px 100px 12px 12px;
-	  width: 250px;
-	  height: 40px;
-	  font-size: 14px;
+border-radius: 18px;
+padding: 8px 78px 8px 8px;
+width: 202px;
+height: 33px;
 	}
 
 	@media screen and (min-width: 1200px) {
-	  padding: 14px 120px 14px 14px;
-	  width: 300px;
-	  height: 45px;
-	  font-size: 16px;
+border-radius: 20px;
+padding: 10px 80px 10px 10px;
+width: 204px;
+height: 35px;
 	}
  }
  .footer-item {
     font-family: var(--font-family);
 	font-weight: 400;
-	font-size: 12px;
+	font-size: 8px;
 	line-height: 170%;
 	color: var(--colorText);
 
 	@media screen and (min-width: 768px) {
-	  font-size: 14px;
+	  font-size: 10px;
 	}
 
 	@media screen and (min-width: 1200px) {
-	  font-size: 16px;
+	  font-size: 12px;
 	}
  }
  .footer-sub {
@@ -162,18 +162,18 @@
  }
 
  .footer-svg {
-    width: 165px;
-	height: 70px;
+    width: 140px;
+	height: 50px;
       fill: var(--colorText);
         color: var(--colorText);
 
 	@media screen and (min-width: 768px) {
-	  width: 200px;
-	  height: 85px;
+	  width: 150px;
+	  height: 60px;
 	}
 
 	@media screen and (min-width: 1200px) {
-	  width: 240px;
-	  height: 100px;
+	  width: 165px;
+	  height: 70px;
 	}
  }
