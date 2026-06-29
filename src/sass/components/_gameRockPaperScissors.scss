@@ -17,6 +17,7 @@ width: 600px;
 padding-top: 20px;
 margin: 0 auto  36px auto;
 text-align: center;
+
 }
 .rps__box {
   margin-right: 104px;
@@ -40,6 +41,7 @@ background: #000;
 display: flex;
 justify-content: center;
 align-items: center;
+cursor: pointer;
 }
 .rps__icon {
   width: 40px;
@@ -47,12 +49,7 @@ align-items: center;
   fill: #fff;
 }
 .rps__info {
-  font-weight: 400;
-font-size: 16px;
-margin-top: 48px;
-}
-.rps__button {
-    font-family: "Montserrat Alternates", sans-serif;
+   font-family: "Montserrat Alternates", sans-serif;
   margin-top: 36px;
   font-weight: 400;
 font-size: 12px;
@@ -62,6 +59,10 @@ padding: 10px 20px;
 width: 182px;
 height: 35px;
 background: #000;
+
+}
+.rps__button {
+   
 }
 .rps__wrapper {
 }
