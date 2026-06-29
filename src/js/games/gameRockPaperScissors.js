@@ -4,7 +4,7 @@ export function initGameRockPaperScissors() {
   let userScore = 0;
   let computerScore = 0;
 
-  const choices = ['stone', 'scissors', 'paper'];
+  const choices = ['Камінь', 'Ножиці', 'Папір'];
 
   gameContainer.innerHTML = `
     <section class="rockPaperScissors">
@@ -33,7 +33,7 @@ export function initGameRockPaperScissors() {
               </li>
             </ul>
 
-            <p class="rps__info">Зроби свій вибір</p>
+            <p class="rps__info">Варіант комп’ютера</p>
           </div>
 
           <div class="rps__wrapper">
@@ -62,9 +62,9 @@ export function initGameRockPaperScissors() {
     if (user === computer) return 'draw';
 
     if (
-      (user === 'stone' && computer === 'scissors') ||
-      (user === 'scissors' && computer === 'paper') ||
-      (user === 'paper' && computer === 'stone')
+      (user === 'Камінь' && computer === 'Ножиці') ||
+      (user === 'Ножиці' && computer === 'Папір') ||
+      (user === 'Папір' && computer === 'Камінь')
     ) {
       return 'user';
     }
@@ -86,12 +86,12 @@ export function initGameRockPaperScissors() {
 
       if (result === 'user') {
         userScore++;
-        info.textContent = `Ти виграв раунд!`;
+        info.textContent = `${computerChoice}`;
       } else if (result === 'computer') {
         computerScore++;
-        info.textContent = `Комп'ютер виграв раунд! `;
+        info.textContent = `${computerChoice}`;
       } else {
-        info.textContent = `Нічия!`;
+        info.textContent = `${computerChoice}`;
       }
 
       updateScore();
