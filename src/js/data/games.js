@@ -3,7 +3,7 @@ import { initCalc } from "../games/calc.js";
 import { initTimeCalculator } from '../games/timeCalculation.js';
 import { initGuessScientist } from "../games/guessScientist.js";
 import { initLeapYearGame } from "../games/leapYearGame.js";
-import { initOurTeam } from '../games/OurTeam.js';
+import { initOurTeam } from '../games/ourTeam.js';
 
 
 export const games = [

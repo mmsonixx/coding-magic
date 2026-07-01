@@ -1,4 +1,4 @@
-
+import './js/games/ourTeam.js';
 import './js/modalWindow.js';
 import './js/footer.js';
 import "./js/renderGames.js";
