@@ -72,6 +72,7 @@ export function initTimeCalculator() {
         </div>
       </div>
     </div>
+    <div class="divider"></div>
   `;
 
   const calcBtn = container.querySelector('#calcBtn');
