@@ -1,0 +1,88 @@
+.biggestNum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.biggestNum-zag{
+    /* Введіть 3 числа */
+margin-top: 36px;
+height: 20px;
+
+
+font-family: var(--font-family);
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 20px;
+/* identical to box height */
+
+color: #000000;
+
+
+}
+.biggestNum-inputs{
+  
+    display: flex;
+margin-top: 36px;
+}
+
+.biggestNum-input{
+    background-color: var(--backgroundInput);
+    border-radius: 20px;
+    border-style: none;
+      text-align: center;
+     padding: 10px 20px;
+}
+.biggestNum-input-2{
+margin-left: 38px;
+}
+.biggestNum-input-3{
+   margin-left: 38px;
+}
+
+.biggestNum-input::placeholder{
+ /* Введіть число */
+ text-align: center;
+width: 95px;
+height: 15px;
+padding-bottom: 3px;
+font-family: var(--font-family);
+
+font-weight: 400;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+
+color: var(--colorTextInput);
+
+padding-left: 19px;
+/* Inside auto layout */
+flex: none;
+order: 0;
+flex-grow: 0;
+
+}
+.biggestNum-result{
+/* Найбільше число, яке ви ввели - (число) */
+
+margin-top: 36px;
+width: 252px;
+height: 15px;
+
+font-family: var(--font-family);
+
+font-weight: 500;
+font-size: 12px;
+line-height: 15px;
+/* identical to box height */
+white-space: nowrap;
+color: var(--colorText);
+
+
+}
+.biggestNum-underline{
+        width: 536px;
+    height: 1px;
+    background-color: #000000;
+ margin-top: 36px;
+}
