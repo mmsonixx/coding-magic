@@ -4,7 +4,7 @@ import { initTimeCalculator } from '../games/timeCalculation.js';
 import { initGuessScientist } from "../games/guessScientist.js";
 import { initLeapYearGame } from "../games/leapYearGame.js";
 import { initOurTeam } from '../games/OurTeam.js';
-
+import { initTheBiggestNumber } from '../games/theBiggestNumber.js'
 
 export const games = [
   {
@@ -50,6 +50,7 @@ export const games = [
     id: 8,
     name: 'Найбільше число',
     category: 'numerical',
+    init: initTheBiggestNumber,
   },
   {
     id: 9,
