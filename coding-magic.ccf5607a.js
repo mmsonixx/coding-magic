@@ -106,6 +106,7 @@ let e,u,t,s;var n="u">typeof globalThis?globalThis:"u">typeof self?self:"u">type
         </div>
       </div>
     </div>
+    <div class="divider"></div>
   `;let u=e.querySelector("#calcBtn"),t=e.querySelector("#secondsInput"),s=e.querySelector("#timeResult");function n(){let e=parseInt(t.value,10);if(isNaN(e)||e<0){s&&(s.textContent="0 дн. 00:00:00");return}let u=Math.floor(e/86400),n=e%86400,a=Math.floor(n/3600),i=Math.floor((n%=3600)/60),r=n%60;a<10&&(a="0"+a),i<10&&(i="0"+i),r<10&&(r="0"+r),s&&(s.textContent=u+" дн. "+a+":"+i+":"+r)}u&&t&&(u.onclick=function(){n()},t.onkeypress=function(e){"Enter"===e.key&&n()})}},{id:6,name:"Google динозаврик",category:"game"},{id:7,name:"Футбол",category:"game"},{id:8,name:"Найбільше число",category:"numerical",init:function(){document.querySelector("#game-8").innerHTML=`<section class="biggestNum">
 <p class="biggestNum-zag">\u{412}\u{432}\u{435}\u{434}\u{456}\u{442}\u{44C} 3 \u{447}\u{438}\u{441}\u{43B}\u{430}</p>
 <ul class="biggestNum-inputs">
@@ -172,4 +173,4 @@ let e,u,t,s;var n="u">typeof globalThis?globalThis:"u">typeof self?self:"u">type
         </div>
       </section>
     `,""),e.forEach(e=>{e.init&&e.init()})}D(L,C),A.forEach(e=>{e.addEventListener("click",e=>{e.preventDefault();let u=e.target.dataset.category;D("all"===u?L:L.filter(e=>e.category===u),C)})});
-//# sourceMappingURL=coding-magic.d8c7417f.js.map
+//# sourceMappingURL=coding-magic.ccf5607a.js.map
