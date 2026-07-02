@@ -5,21 +5,31 @@
 }
 
 .leap-year__title {
-  width: 536px;
+  width: 100%; 
   margin: 0 auto 36px;
   padding-top: 36px;
   border-top: 1px solid #000;
   font-weight: 400;
   font-size: 16px;
   text-align: center;
+
+  @media screen and (min-width: 768px) {
+    width: 536px; 
+  }
 }
 
 .leap-year__content {
   display: flex;
+  flex-direction: column; 
   justify-content: center;
   align-items: center;
-  gap: 140px;
+  gap: 20px;
   margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row; 
+    gap: 140px;
+  }
 }
 
 .leap-year__field {
@@ -40,10 +50,10 @@
   font-weight: 400;
   font-size: 12px;
   color: #000;
-}
 
-.leap-year__input::placeholder {
-  color: var(--colorTextInput);
+  &::placeholder {
+    color: var(--colorTextInput);
+  }
 }
 
 .leap-year__button {
@@ -54,11 +64,11 @@
   height: 35px;
   border-radius: 0 20px 20px 0;
   background: #000;
-}
 
-.leap-year__button:hover,
-.leap-year__button:focus {
-  background: gray;
+  &:hover,
+  &:focus {
+    background: gray;
+  }
 }
 
 .leap-year__icon {
@@ -68,41 +78,34 @@
 }
 
 .leap-year__result {
-  min-width: 260px;
+  min-width: 0;
+  text-align: center; 
   font-family: var(--font-family);
   font-weight: 400;
   font-size: 12px;
   color: var(--correctText);
-}
 
-.leap-year__result.is-error {
-  color: var(--inCorrectText);
-}
+  @media screen and (min-width: 768px) {
+    min-width: 260px;
+    text-align: left;
+  }
 
-.leap-year__result.is-success {
-  color: var(--correctText);
+  &.is-error {
+    color: var(--inCorrectText);
+  }
+
+  &.is-success {
+    color: var(--correctText);
+  }
 }
 
 .leap-year__divider {
-  width: 536px;
+  width: 100%; 
   height: 1px;
   margin: 0 auto;
   background: #000;
-}
 
-@media screen and (max-width: 767px) {
-  .leap-year__title,
-  .leap-year__divider {
-    width: 100%;
-  }
-
-  .leap-year__content {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .leap-year__result {
-    min-width: 0;
-    text-align: center;
+  @media screen and (min-width: 768px) {
+    width: 536px; 
   }
 }
