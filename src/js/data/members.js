@@ -1,7 +1,7 @@
-import sonya from '../../images/members/sonya.webp';
-import dima from '../../images/members/dima.webp';
-import roma from '../../images/members/roma.webp';
-import yaroslav from '../../images/members/yaroslav.webp';
+import sonya from 'url:../../images/members/sonya.webp';
+import dima from 'url:../../images/members/dima.webp';
+import roma from 'url:../../images/members/roma.webp';
+import yaroslav from 'url:../../images/members/yaroslav.webp';
 export const members = [
   {
     photo: sonya,
