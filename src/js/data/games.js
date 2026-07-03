@@ -1,8 +1,12 @@
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
 import { initCalc } from "../games/calc.js";
+import { initTimeCalculator } from '../games/timeCalculation.js';
 import { initGuessScientist } from "../games/guessScientist.js";
 import { initLeapYearGame } from "../games/leapYearGame.js";
 import { initOurTeam } from '../games/ourTeam.js';
+import { initTheBiggestNumber } from "../games/theBiggestNumber.js";
+
+
 
 export const games = [
   {
@@ -32,6 +36,7 @@ export const games = [
     id: 5,
     name: 'Калькулятор часу',
     category: 'numerical',
+    init: initTimeCalculator,
   },
   {
     id: 6,
@@ -47,6 +52,7 @@ export const games = [
     id: 8,
     name: 'Найбільше число',
     category: 'numerical',
+    init: initTheBiggestNumber,
   },
   {
     id: 9,

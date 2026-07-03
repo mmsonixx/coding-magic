@@ -4,55 +4,54 @@ const dropdownButton = document.querySelector('.dropdown__button');
 const dropdownMenu = document.querySelector('.dropdown');
 const themeToggle = document.querySelector('.theme-toggle__input');
 
-dropdownButton.onclick = function () {
-  dropdownMenu.classList.toggle('is-open');
-};
+if (dropdownButton && dropdownMenu) {
+  dropdownButton.onclick = function () {
+    dropdownMenu.classList.toggle('is-open');
+  };
+}
 
-const themToggle = document.querySelector('.theme-toggle__input');
-
-themeToggle.addEventListener('change', e => {
-  if (e.target.checked) {
-    document.body.setAttribute('data-theme', 'dark');
-  } else {
-    document.body.removeAttribute('data-theme');
-  }
-});
+if (themeToggle) {
+  themeToggle.addEventListener('change', e => {
+    if (e.target.checked) {
+      document.body.setAttribute('data-theme', 'dark');
+    } else {
+      document.body.removeAttribute('data-theme');
+    }
+  });
+}
 
 const myInput = document.querySelector('.MD-logIn-input1');
 const userGreeting = document.getElementById('userGreeting');
 
 let savedName = 'Гість';
 
-userGreeting.textContent = 'Вітаємо, ' + savedName + '!';
-myInput.value = '';
+if (userGreeting) {
+  userGreeting.textContent = 'Вітаємо, ' + savedName + '!';
+}
 
-myInput.addEventListener('input', function () {
-  let currentName = myInput.value;
+if (myInput) {
+  myInput.value = '';
+  myInput.addEventListener('input', function () {
+    let currentName = myInput.value;
 
-  if (currentName == '') {
-    currentName = 'Гість';
-  }
+    if (currentName == '') {
+      currentName = 'Гість';
+    }
 
-  userGreeting.textContent = 'Вітаємо, ' + currentName + '!';
-  localStorage.setItem('userName', currentName);
-});
+    if (userGreeting) {
+      userGreeting.textContent = 'Вітаємо, ' + currentName + '!';
+    }
+    localStorage.setItem('userName', currentName);
+  });
+}
 
-const container = document.querySelector('#game-5');
+export function initTimeCalculator() {
+  const container = document.querySelector('#game-5');
+  if (!container) return;
 
-const renderGames = (markup, container) => {
-  if (!container) {
-    console.log('Упс! Немає такого контейнера');
-    return;
-  }
-  container.innerHTML = markup;
-};
-
-const createHtml = obj => {
-  return `
-  <div class="container">
-   <div class="calculator-container">
+  container.innerHTML = `
+    <div class="calculator-container">
       <h2 class="calcylation_title">Калькулятор часу</h2>
-
       <div class="calc-row">
         <div class="search-box">
           <input
@@ -67,62 +66,55 @@ const createHtml = obj => {
             </svg>
           </button>
         </div>
-
         <div class="divder"></div>
-
         <div class="result" id="timeResult">
           0 дн. 00:00:00
         </div>
       </div>
-    </div></div>
-   
+    </div>
+    <div class="divider"></div>
   `;
-};
 
-renderGames(createHtml(games), container);
+  const calcBtn = container.querySelector('#calcBtn');
+  const secondsInput = container.querySelector('#secondsInput');
+  const timeResult = container.querySelector('#timeResult');
 
-const calcBtn = document.getElementById('calcBtn');
-const secondsInput = document.getElementById('secondsInput');
-
-if (calcBtn && secondsInput) {
-  calcBtn.onclick = function () {
-    calculateTime();
-  };
-
-  secondsInput.onkeypress = function (event) {
-    if (event.key == 'Enter') {
+  if (calcBtn && secondsInput) {
+    calcBtn.onclick = function () {
       calculateTime();
+    };
+
+    secondsInput.onkeypress = function (event) {
+      if (event.key === 'Enter') {
+        calculateTime();
+      }
+    };
+  }
+
+  function calculateTime() {
+    const totalSeconds = parseInt(secondsInput.value, 10);
+
+    if (isNaN(totalSeconds) || totalSeconds < 0) {
+      if (timeResult) timeResult.textContent = '0 дн. 00:00:00';
+      return;
     }
-  };
-}
 
-function calculateTime() {
-  const totalSeconds = parseInt(secondsInput.value, 10);
+    let days = Math.floor(totalSeconds / 86400);
+    let remainder = totalSeconds % 86400;
 
-  if (isNaN(totalSeconds) || totalSeconds < 0) {
-    document.getElementById('timeResult').textContent = '0 дн. 00:00:00';
-    return;
+    let hours = Math.floor(remainder / 3600);
+    remainder = remainder % 3600;
+
+    let minutes = Math.floor(remainder / 60);
+    let seconds = remainder % 60;
+
+    if (hours < 10) hours = '0' + hours;
+    if (minutes < 10) minutes = '0' + minutes;
+    if (seconds < 10) seconds = '0' + seconds;
+
+    if (timeResult) {
+      timeResult.textContent =
+        days + ' дн. ' + hours + ':' + minutes + ':' + seconds;
+    }
   }
-
-  let days = Math.floor(totalSeconds / 86400);
-  let remainder = totalSeconds % 86400;
-
-  let hours = Math.floor(remainder / 3600);
-  remainder = remainder % 3600;
-
-  let minutes = Math.floor(remainder / 60);
-  let seconds = remainder % 60;
-
-  if (hours < 10) {
-    hours = '0' + hours;
-  }
-  if (minutes < 10) {
-    minutes = '0' + minutes;
-  }
-  if (seconds < 10) {
-    seconds = '0' + seconds;
-  }
-
-  document.getElementById('timeResult').textContent =
-    days + ' дн. ' + hours + ':' + minutes + ':' + seconds;
 }
