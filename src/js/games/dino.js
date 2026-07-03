@@ -9,7 +9,7 @@ export class dinoGame {
 
   init() {
     document.addEventListener('keydown', event => {
-      if (event.code == space && !this.isJumping && !this.gameOver) {
+      if (event.code === 'Space' && !this.isJumping && !this.gameOver) {
         event.preventDefault();
         this.jump();
       }
@@ -112,7 +112,7 @@ export class dinoGame {
   }
 
   restartGame() {
-    this.gameArea.querySelector('dino__modal').remove();
+    this.gameArea.querySelector('.dino__modal').remove();
     this.gameArea.querySelector('.cactus').remove();
     this.gameOver = false;
     this.renderObstacles();

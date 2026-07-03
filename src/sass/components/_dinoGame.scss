@@ -24,13 +24,14 @@
 
 .dinoGame__character {
   position: absolute;
-  bottom: 50px;
+  bottom: 0;
   left: 200px;
-  width: 30px;
-  height: 60px;
-  background-color: red;
-  background-size: cover;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/dino-photo6.webp');
+  background-size: 150%;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .cactus {
   background-color: rgb(117, 117, 117);
