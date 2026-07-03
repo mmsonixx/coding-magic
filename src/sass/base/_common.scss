@@ -4,6 +4,9 @@ max-width: 1090px;
 padding-left: 15px;
 padding-right: 15px;
 margin: 0 auto;
+background-color: var(--colorBg);
+  transition:
+    background-color 0.3s,
 }
 body {
   background-image: url('../bg-img.webp');

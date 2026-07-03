@@ -10,6 +10,7 @@
     --swiper-color: #000;
   --swiper-bullet: #000;
    --buttontTextColor: #fff;
+   --colorBg: #fff;
 }
 [data-theme= 'dark'] {
  --colorText: #fff;
@@ -17,4 +18,5 @@
      --swiper-color: #fff;
   --swiper-bullet: #fff;
        --buttontTextColor: #000;
+        --colorBg: #1C1C1C;
 }
