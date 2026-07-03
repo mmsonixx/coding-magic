@@ -7,6 +7,7 @@ import { initOurTeam } from '../games/ourTeam.js';
 import { initTheBiggestNumber } from "../games/theBiggestNumber.js";
 
 
+
 export const games = [
   {
     id: 1,
