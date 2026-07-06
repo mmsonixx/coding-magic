@@ -1,16 +1,18 @@
 body {
   background-image: url('../bg-img.webp');
-  background-repeat: repeat-y;   
+  background-repeat: repeat-y;
   background-position: center top;
-  background-size: 100% auto;    
-  background-attachment: scroll; 
+  background-size: 100% auto;
+  background-attachment: scroll;
 
   @media screen and (min-width: 768px) {
     background-size: contain; 
     background-position: center top;
+    background-attachment: scroll;
   }
 
   @media screen and (min-width: 1200px) {
     background-size: 100% auto; 
+    background-attachment: scroll;
   }
 }
