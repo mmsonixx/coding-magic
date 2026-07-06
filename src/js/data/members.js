@@ -1,6 +1,6 @@
 import sonya from 'url:../../images/members/sonya.webp';
 import dima from 'url:../../images/members/dima.webp';
-import roma from 'url:../../images/members/roma.webp';
+import roma from 'url:../../images/members/member.webp';
 import yaroslav from 'url:../../images/members/yaroslav.webp';
 export const members = [
   {
@@ -25,12 +25,12 @@ export const members = [
     description: 'Developers,Section: Футбол,Google динозавр',
   },
   {
-    photo: sonya,
+    photo: roma,
     name: 'Лука',
     description: 'Developers, Section: Footer,Калькулятор',
   },
   {
-    photo: sonya,
+    photo: roma,
     name: 'Олексій',
     description: 'Developers,Section: Вгадай число, яке загадав комп’ютер',
   },
