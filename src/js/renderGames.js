@@ -20,7 +20,6 @@ function renderGames(gamesData, container) {
       <section class="section section-${game.id}">
         <div class="container">
           <div class="game" id="game-${game.id}">
-             <h3>${game.name}</h3> 
           </div>
         </div>
       </section>
