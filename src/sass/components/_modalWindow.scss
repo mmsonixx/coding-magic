@@ -75,9 +75,10 @@
   width: 169px;
   height: 35px;
   border-style: none;
+  padding-left: 10px;
 
   &:placeholder {
-    margin-left: 10px;
+    padding-left: 10px;
   }
 
   &:active {
