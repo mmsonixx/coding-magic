@@ -1,5 +1,5 @@
-export function initGuessNumberGame() {
-  const gameContainer = document.querySelector('#game-2'); 
+export function initTheBiggestNumber() {
+  const gameContainer = document.querySelector('#game-2');
 
   if (!gameContainer) {
     return;
@@ -36,7 +36,7 @@ export function initGuessNumberGame() {
 
   const checkNumber = () => {
     const userGuess = Number(input.value);
-    
+
     const pcNumber = Math.floor(Math.random() * 10) + 1;
 
     if (!Number.isInteger(userGuess) || userGuess < 1 || userGuess > 10) {
