@@ -1,65 +1,44 @@
-export function initGuessNumberGame() {
-  const gameContainer = document.querySelector('#game-2'); 
+export function initTheBiggestNumber() {
+  const gameContainer = document.querySelector('#game-8');
+  const gameHtml = `<section class="biggestNum">
+<p class="biggestNum-zag">Введіть 3 числа</p>
+<ul class="biggestNum-inputs">
+    <li><input class="biggestNum-input biggestNum-input-1" placeholder="Введіть число" type="number"></li>
+    <li><input class="biggestNum-input biggestNum-input-2" placeholder="Введіть число" type="number"></li>
+    <li><input class="biggestNum-input biggestNum-input-3" placeholder="Введіть число" type="number"></li>
+</ul>
+<p class="biggestNum-result">Найбільше число, яке ви ввели - (число)</p>
+<div class="biggestNum-underline"></div>
+</section>
+`;
+  gameContainer.innerHTML = gameHtml;
 
-  if (!gameContainer) {
-    return;
-  }
-
-  gameContainer.innerHTML = `
-    <section class="guess-number">
-      <h2 class="guess-number__title">Вгадай число, яке загадав комп’ютер</h2>
-      <div class="guess-number__content">
-        <div class="guess-number__field">
-          <input
-            class="guess-number__input"
-            type="number"
-            min="1"
-            max="10"
-            placeholder="Введіть число"
-            data-number-input
-          />
-          <button class="guess-number__button" type="button" aria-label="Перевірити число" data-number-button>
-            <svg class="guess-number__icon" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M10.5 4a6.5 6.5 0 0 1 5.17 10.44l4.45 4.44-1.24 1.24-4.44-4.45A6.5 6.5 0 1 1 10.5 4Zm0 1.75a4.75 4.75 0 1 0 0 9.5 4.75 4.75 0 0 0 0-9.5Z" />
-            </svg>
-          </button>
-        </div>
-        <p class="guess-number__result" data-number-result></p>
-      </div>
-      <div class="guess-number__divider"></div>
-    </section>
-  `;
-
-  const input = gameContainer.querySelector('[data-number-input]');
-  const button = gameContainer.querySelector('[data-number-button]');
-  const result = gameContainer.querySelector('[data-number-result]');
-
-  const checkNumber = () => {
-    const userGuess = Number(input.value);
-    
-    const pcNumber = Math.floor(Math.random() * 10) + 1;
-
-    if (!Number.isInteger(userGuess) || userGuess < 1 || userGuess > 10) {
-      result.textContent = 'Введіть ціле число від 1 до 10!';
-      result.className = 'guess-number__result is-error';
+  const biggestNumresult = document.querySelector('.biggestNum-result');
+  const biggestNuminput1 = document.querySelector('.biggestNum-input-1');
+  const biggestNuminput2 = document.querySelector('.biggestNum-input-2');
+  const biggestNuminput3 = document.querySelector('.biggestNum-input-3');
+  const biggestNuminput = document.querySelector('.biggestNum-input');
+  function biggestNum() {
+    const biggestNuminput1Value = parseFloat(biggestNuminput1.value);
+    const biggestNuminput3Value = parseFloat(biggestNuminput3.value);
+    const biggestNuminput2Value = parseFloat(biggestNuminput2.value);
+    console.log(typeof biggestNuminput1Value);
+    if (
+      typeof biggestNuminput1Value !== 'number' ||
+      typeof biggestNuminput2Value !== 'number' ||
+      typeof biggestNuminput3Value !== 'number'
+    ) {
       return;
-    }
-
-    if (userGuess === pcNumber) {
-      result.textContent = `Вітаю, ви вгадали число! (${pcNumber})`;
-      result.className = 'guess-number__result is-success';
     } else {
-      result.textContent = `Ви програли, комп'ютер загадав (${pcNumber})`;
-      result.className = 'guess-number__result is-error';
+      let maxNum = Math.max(
+        biggestNuminput1Value,
+        biggestNuminput2Value,
+        biggestNuminput3Value
+      );
+      biggestNumresult.textContent = `найбільше число яке ви ввели число(${maxNum})`;
     }
-
-    input.value = '';
-  };
-
-  button.addEventListener('click', checkNumber);
-  input.addEventListener('keydown', event => {
-    if (event.key === 'Enter') {
-      checkNumber();
-    }
-  });
+  }
+  biggestNuminput1.addEventListener('input', biggestNum);
+  biggestNuminput2.addEventListener('input', biggestNum);
+  biggestNuminput3.addEventListener('input', biggestNum);
 }

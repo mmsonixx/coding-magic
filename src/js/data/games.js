@@ -5,6 +5,7 @@ import { initGuessScientist } from "../games/guessScientist.js";
 import { initLeapYearGame } from "../games/leapYearGame.js";
 import { initOurTeam } from '../games/ourTeam.js';
 import { initTheBiggestNumber } from "../games/theBiggestNumber.js";
+import { initGuessNumberGame } from "../games/guessNumOfPC.js"
 
 
 
@@ -66,4 +67,10 @@ export const games = [
     category: 'acquaintance',
     init: initGuessScientist,
   },
+  {
+    id: 11,
+    name: 'Вчений',
+    category: 'numerical',
+    init: initGuessNumberGame,
+  }
 ];
