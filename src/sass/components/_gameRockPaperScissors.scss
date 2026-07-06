@@ -1,85 +1,205 @@
-.rockPaperScissors{
-padding-top: 36px;
+.rockPaperScissors {
+    padding-top: 36px;
 }
 
-.rps__container{
- display: flex;
-
+.rps__container {
+    display: flex;
+    justify-content: center;
+    position: relative;
 }
+
 .rps__title {
-font-family: "Montserrat Alternates", sans-serif;
- font-weight: 400;
-font-size: 16px;
-margin-bottom:  36px;
-border-top: solid 1px;
-width: 600px;
-padding-top: 20px;
-margin: 0 auto  36px auto;
-text-align: center;
-
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    border-top: 1px solid #000;
+    max-width: 600px;
+    width: 100%;
+    padding-top: 20px;
+    margin: 0 auto 36px;
+    text-align: center;
 }
+
 .rps__box {
-  margin-right: 104px;
-  margin-left: 420px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
 .rps__list {
-  display: flex;
-  flex-direction: row;
-  gap: 38px;
+    display: flex;
+    flex-direction: row;
+    gap: 38px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
+
 .rps__item {
-  border-radius: 20px;
-padding: 10px;
-width: 60px;
-height: 60px;
-background: #000;
-display: flex;
-justify-content: center;
-align-items: center;
-cursor: pointer;
+    border-radius: 20px;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
+
 .rps__icon {
-  width: 40px;
-  height: 40px;
-  fill: #fff;
+    width: 40px;
+    height: 40px;
+    fill: #fff;
 }
+
 .rps__info {
-   font-family: "Montserrat Alternates", sans-serif;
-  margin-top: 36px;
-  font-weight: 400;
-font-size: 12px;
-color: #fff;
-border-radius: 20px;
-padding: 10px 20px;
-width: 182px;
-height: 35px;
-background: #000;
+    font-family: "Montserrat Alternates", sans-serif;
+    margin-top: 36px;
+    font-weight: 400;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 182px;
+    height: 35px;
+    background: #000;
+    text-align: center;
+    box-sizing: border-box;
+}
 
-}
-.rps__button {
-   
-}
 .rps__wrapper {
+    position: absolute;
+    right: 120px;
 }
-.rps__text {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 400;
-font-size: 15px;
-line-height: 170%;
 
+.rps__text,
+#computerScore,
+#userScore {
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 170%;
 }
+
 .rps__counters {
+    padding: 0;
+    margin: 0;
+    list-style: none;
 }
-.rps__counter {
-}
+
 .rps__count__name {
-  font-family: "Montserrat Alternates", sans-serif;
-  font-weight: 400;
-font-size: 15px;
-line-height: 170%;
-color: #000;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 170%;
+    color: #000;
+}
+
+
+
+@media (max-width: 992px) {
+
+    .rps__wrapper {
+        right: 30px;
+    }
+
+    .rps__list {
+        gap: 24px;
+    }
+
+    .rps__item {
+        width: 55px;
+        height: 55px;
+    }
+
+    .rps__icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+
+@media (max-width: 768px) {
+
+    .rps__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .rps__wrapper {
+        position: static;
+        text-align: center;
+    }
+
+    .rps__title {
+        font-size: 15px;
+        max-width: 100%;
+    }
+
+    .rps__list {
+        gap: 18px;
+    }
+
+    .rps__item {
+        width: 52px;
+        height: 52px;
+        padding: 8px;
+    }
+
+    .rps__icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .rps__info {
+        width: 170px;
+        margin-top: 25px;
+    }
+
+    .rps__text,
+    #computerScore,
+    #userScore {
+        font-size: 14px;
+    }
+}
+
+
+
+@media (max-width: 480px) {
+
+    .rockPaperScissors {
+        padding: 30px 15px 0;
+    }
+
+    .rps__title {
+        font-size: 14px;
+    }
+
+    .rps__list {
+        gap: 12px;
+    }
+
+    .rps__item {
+        width: 48px;
+        height: 48px;
+    }
+
+    .rps__icon {
+        width: 28px;
+        height: 28px;
+    }
+
+    .rps__info {
+        width: 160px;
+        font-size: 11px;
+    }
+
+    .rps__text,
+    #computerScore,
+    #userScore {
+        font-size: 13px;
+    }
 }
