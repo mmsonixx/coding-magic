@@ -1,0 +1,105 @@
+#game-6 {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.dinoGame__title {
+  font-size: 16px;
+  line-height: 1.25;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 36px;
+  margin-bottom: 36px;
+}
+
+.dinoGame__box {
+  height: 241px;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  aspect-ratio: 4/1;
+  border-radius: 10px;
+  border: 2px solid;
+}
+
+.dinoGame__character {
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  width: 50px;
+  height: 50px;
+  background-image: url('../images/dino-photo6.webp');
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cactus {
+  background-color: rgb(117, 117, 117);
+  width: 30px;
+  height: 60px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: moveObstacle 2s linear infinite;
+}
+
+.dino__modal {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--backgroundInput);
+  gap: 15px;
+  opacity: 0;
+  transition: opacity 250ms ease-in-out;
+}
+
+.dino__message {
+  font-size: 18px;
+}
+.dino__start {
+  border: 1px solid black;
+  padding: 15px 20px;
+  border-radius: 10px;
+  transition: transform 250ms ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+.dino__modal.show {
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+
+@keyframes moveObstacle {
+  from {
+    right: -20px;
+  }
+
+  to {
+    right: 100%;
+  }
+}
+
+.jump {
+  animation: jump 0.5s ease-out;
+}
+
+@keyframes jump {
+  0% {
+    translate: 0 0;
+  }
+
+  50% {
+    translate: 0 -100px;
+  }
+
+  100% {
+    translate: 0 0;
+  }
+}
