@@ -3,7 +3,7 @@
     <div class="game" id="game-footer">
       <div class="footer-logo">
         <svg class="footer-svg">
-<use href="./images/icons/symbol-defs.svg#icon-logo">
+<use href="#icon-logo">
         </svg>
       </div>
       <ul class="footer-list">
@@ -15,12 +15,15 @@
       </ul>
       <div class="footer-sub-wrapper">
         <div class="footer-sub">
-          <input
-            type="email"
-            class="footer-input"
-            placeholder="Ваша ел. адреса..."
-          />
-          <button class="footer-button">Підписатись</button>
+          <form>
+            <input
+              type="email"
+              class="footer-input"
+              placeholder="Ваша ел. адреса..."
+              required
+            />
+            <button type="submit" class="footer-button" data-modal-open>Підписатись</button>
+          </form>
         </div>
         <p class="footer-text">
           *Підписавшись, Ви зможете отримувати інформацію про новинки на сайті

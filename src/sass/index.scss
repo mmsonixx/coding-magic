@@ -1,11 +1,19 @@
 @import './base/common';
 @import './base/reset';
 @import './utils/variebles';
-@import './modalWindow';
+@import './components/modalWindow';
 @import './components/header';
+@import './components/timeCalculation';
+@import './components/leapYearGame';
 @import './components/gameRockPaperScissors';
+@import './components/calc';
+@import './components/guessScientist';
+@import './components/ourTeam';
 @import './components/footer';
-@import './components/dinoGame'
+@import './components/dinoGame';
+@import './components/theBiggestNumber.scss';
+@import './components/hero';
+
 
 
 

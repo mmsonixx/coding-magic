@@ -1,0 +1,246 @@
+body {
+  background-color: var(--colorBackgrondBody);
+  color: var(--colorText);
+  transition:
+    background-color 0.3s,
+    color 0.3s;
+}
+
+.header {
+  width: 100%;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  background-color: var(--colorBackgrondBody);
+  transition: background-color 0.3s;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+}
+
+.header_logo {
+  display: flex;
+  align-items: center;
+  width: 93px;
+  height: 38px;
+  color: var(--colorText);
+  fill: var(--colorText);
+  transition:
+    color 0.3s,
+    fill 0.3s;
+  use {
+    fill: currentColor;
+  }
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  margin-left: 81px;
+  margin-right: auto;
+  gap: 50px;
+}
+
+.menu__link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+
+  color: var(--colorText);
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.user-greeting {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
+
+  font-size: 16px;
+  color: var(--colorText);
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown__button {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  text-align: right;
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: var(--colorText);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 0;
+}
+
+.dropdown__list {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-15px);
+  background-color: var(--colorBackgrondBody);
+  border: 2px solid var(--colorText);
+  border-radius: 0 0 15px 15px;
+  padding: 0;
+  margin-top: 10px;
+  list-style: none;
+  min-width: 150px;
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    visibility 0.25s;
+}
+
+[data-theme='dark'] .dropdown__list {
+  border-color: var(--colorTextInput);
+  box-shadow: 0 4px 20px rgba(255, 255, 255, 0.15);
+}
+
+.dropdown.is-open .dropdown__list {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+}
+
+.dropdown__link {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  display: block;
+  padding: 10px;
+  color: var(--colorText);
+  text-decoration: none;
+  text-align: center;
+}
+
+.dropdown__arrow {
+  transition: transform 0.25s ease;
+}
+
+.dropdown.is-open .dropdown__arrow {
+  transform: rotate(180deg);
+}
+
+.dropdown__link:hover {
+  background-color: var(--backgroundInput);
+}
+
+.theme-toggle {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.theme-toggle__input {
+  display: none;
+}
+
+.theme-toggle__track {
+  display: block;
+  width: 60px;
+  height: 30px;
+  background-color: var(--colorTextInput);
+  border-radius: 15px;
+  position: relative;
+}
+
+.theme-toggle__thumb {
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--textColor);
+  border: 2px solid var(--colorText);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.icon {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+}
+
+.icon--sun {
+  opacity: 1;
+}
+
+.icon--moon {
+  opacity: 0;
+}
+
+.theme-toggle__input:checked + .theme-toggle__track .theme-toggle__thumb {
+  transform: translateX(30px);
+}
+
+.theme-toggle__input:checked + .theme-toggle__track .icon--sun {
+  opacity: 0;
+}
+
+.theme-toggle__input:checked + .theme-toggle__track .icon--moon {
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 160px;
+  }
+
+  .header__container {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 15px;
+  }
+
+  .menu {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 0 0 0;
+    gap: 12px;
+  }
+
+  .header-right {
+    order: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding-top: 190px;
+  }
+
+  .user-greeting {
+    display: none;
+  }
+}

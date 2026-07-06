@@ -7,8 +7,16 @@
    --backgroundInput: #d7d7d7;
    --background: #d9d9d9;
    --colorBackgrondBody: #fff;
+    --swiper-color: #000;
+  --swiper-bullet: #000;
+   --buttontTextColor: #fff;
+   --colorBg: #fff;
 }
 [data-theme= 'dark'] {
  --colorText: #fff;
     --colorBackgrondBody: #1C1C1C;  
+     --swiper-color: #fff;
+  --swiper-bullet: #fff;
+       --buttontTextColor: #000;
+        --colorBg: #1C1C1C;
 }

@@ -1,0 +1,180 @@
+.MD-fon {
+  background-image: url('../images/icons/modalWindowBG.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 576px;
+  height: 131px;
+  position: absolute;
+  top: 140px;
+  left: 50px;
+  z-index: 0;
+}
+.modalWindow {
+  position: relative;
+  flex-direction: column; /* додай це */
+  align-items: center; /* центрує по горизонталі */
+
+  width: 576px;
+  height: 316px;
+  display: flex;
+  justify-content: center;
+  background-color: var(--colorBackgrondBody);
+  opacity: 1;
+  border-radius: 20px;
+  display: none;
+  z-index: 1;
+}
+
+.MD-mainText {
+  /* margin-top: 30px; */
+  text-align: center;
+  white-space: normal; /* додай це */
+  word-break: break-word; /* і це */
+
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #000000;
+}
+
+.MD-zag {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: baseline;
+  /* Привіт! Ви потрапили на сайт інтерактивних ігор та завдань Надіємось, що вам сподобається і ви отримаєте позитивні емоції! Бажаємо Вам гарно провести час! */
+
+  font-family: 'Inter', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #000000;
+}
+.MD-logIn {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+}
+.MD-logIn-input1 {
+  border-radius: 20px;
+  background-color: #d7d7d7;
+  color: 77eE7E;
+  width: 169px;
+  height: 35px;
+  border-style: none;
+  padding-left: 10px;
+
+  &::placeholder {
+    padding-left: 10px;
+  }
+
+  &:active {
+    border-style: none;
+  }
+}
+.MD-logIn-btn {
+  margin-top: 18px;
+  width: 105px;
+  height: 35px;
+  border-radius: 20px;
+  background-color: #000000;
+  color: white;
+  border-style: none;
+  margin-left: 34px;
+}
+.MD-cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+}
+.MD-logIn-zag {
+  position: static;
+  margin-bottom: 20px;
+  /* margin-left: 10px; */
+  /* Введіть своє ім’я: */
+
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  /* identical to box height */
+  text-align: center;
+
+  color: #000000;
+}
+.MD-thanks {
+  width: 463px;
+  height: 245px;
+  background-color: var(--colorBackgrondBody);
+  border-radius: 20px;
+  margin-top: 154px;
+  display: none;
+  position: relative;
+}
+.MD-thanks-fon {
+  background-image: url('../images/icons/modalWindowBG.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 378px;
+  height: 106px;
+  position: absolute;
+  top: 80px;
+  left: 40px;
+  z-index: 0;
+}
+.MD-thanks-zag {
+  margin-top: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  color: var(--colorText);
+}
+.MD-thanks-cross {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 15px;
+  height: 15px;
+}
+.MD-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.MD-overlay.active {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Самі модальні вікна тепер мають бути ВСЕРЕДИНІ оверлею, або позиціонуватись поверх нього через z-index вищий за 10 */
+.modalWindow,
+.MD-thanks {
+  z-index: 11;
+}
