@@ -1,11 +1,14 @@
+
+import { initCalc } from '../games/calc.js';
 import { initGameRockPaperScissors } from "../games/gameRockPaperScissors.js";
 import { initDinoGmae } from "../games/dinoGame.js";
-import { initCalc } from "../games/calc.js";
 import { initTimeCalculator } from '../games/timeCalculation.js';
-import { initGuessScientist } from "../games/guessScientist.js";
-import { initLeapYearGame } from "../games/leapYearGame.js";
+import { initGuessScientist } from '../games/guessScientist.js';
+import { initLeapYearGame } from '../games/leapYearGame.js';
 import { initOurTeam } from '../games/ourTeam.js';
-import { initTheBiggestNumber } from "../games/theBiggestNumber.js";
+import { initTheBiggestNumber } from '../games/theBiggestNumber.js';
+import { initGameFootball } from '../games/football.js';
+
 
 
 export const games = [
@@ -48,6 +51,7 @@ export const games = [
     id: 7,
     name: 'Футбол',
     category: 'game',
+    init: initGameFootball,
   },
   {
     id: 8,
