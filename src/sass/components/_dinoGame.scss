@@ -28,19 +28,22 @@
   left: 200px;
   width: 50px;
   height: 50px;
-  background-image: url('../images/dino-photo6.webp');
+  background-image: url('../images/dino-photo.webp');
   background-size: 150%;
   background-repeat: no-repeat;
   background-position: center;
 }
 .cactus {
-  background-color: rgb(117, 117, 117);
+  background-image: url('../images/cactus-photo.webp');
   width: 30px;
   height: 60px;
   position: absolute;
   bottom: 0;
   right: 0;
   animation: moveObstacle 2s linear infinite;
+  background-size: 115%;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .dino__modal {
