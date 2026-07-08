@@ -1,7 +1,7 @@
 import sonya from 'url:../../images/members/sonya.webp';
 import dima from 'url:../../images/members/dima.webp';
 import luca from 'url:../../images/members/member.webp';
-import alexander from 'url:../../images/members/member.webp';
+import alexander from 'url:../../images/members/alexander.webp';
 import roma from 'url:../../images/members/roma.webp';
 import yaroslav from 'url:../../images/members/yaroslav.webp';
 export const members = [
