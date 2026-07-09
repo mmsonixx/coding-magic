@@ -6,5 +6,24 @@ export function initGameFootball() {
     <div class="football-ball"></div>
    </div>
     `;
-  console.log('d');
+  const area = document.querySelector('.football-area');
+  const ball = document.querySelector('.football-ball');
+
+  const handleBlockMove = event => {
+    const x = event.offsetX;
+    const y = event.offsetY;
+
+    ball.style.left = `${x - 25}px`;
+    ball.style.top = `${y - 25}px`;
+  };
+
+  ball.addEventListener('mousedown', () => {
+    ball.style.pointerEvents = 'none';
+    area.addEventListener('mousemove', handleBlockMove);
+  });
+
+  document.addEventListener('mouseup', () => {
+    ball.style.pointerEvents = 'auto';
+    area.removeEventListener('mousemove', handleBlockMove);
+  });
 }
