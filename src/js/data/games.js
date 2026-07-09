@@ -8,6 +8,7 @@ import { initLeapYearGame } from '../games/leapYearGame.js';
 import { initOurTeam } from '../games/ourTeam.js';
 import { initTheBiggestNumber } from '../games/theBiggestNumber.js';
 import { initGameFootball } from '../games/football.js';
+import { initTicTacToe } from '../games/ticTacToe.js';
 
 
 
@@ -45,7 +46,7 @@ export const games = [
     id: 6,
     name: 'Google динозаврик',
     category: 'game',
-    init: initDinoGmae
+    init: initDinoGmae,
   },
   {
     id: 7,
@@ -70,5 +71,12 @@ export const games = [
     name: 'Вчений',
     category: 'acquaintance',
     init: initGuessScientist,
+  },
+
+  {
+    id: 11,
+    name: 'ticTacToe ',
+    category: 'game',
+   init: initTicTacToe,
   },
 ];
