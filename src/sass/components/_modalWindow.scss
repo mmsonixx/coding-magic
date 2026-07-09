@@ -77,8 +77,8 @@
   border-style: none;
   padding-left: 10px;
 
-  &:placeholder {
-    padding-left: 10px;
+  &::placeholder {
+    // padding-left: 10px;
   }
 
   &:active {
