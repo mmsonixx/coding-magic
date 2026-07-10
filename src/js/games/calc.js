@@ -1,8 +1,6 @@
 export function initCalc() {
     const gameContainer = document.querySelector('#game-4');
-    const gameHtml = `<section class="section section-4">
-      <div class="container">
-        <div class="game" id="game-4">
+    const gameHtml = `
           <div class="calc-text-box">
           <h3 class="calc-text">Калькулятор</h3>
           </div>
@@ -20,11 +18,7 @@ export function initCalc() {
 
           </div>
 <div class="divider"></div>
-        </div>
-
-      </div>
-
-    </section>`;
+`;
     gameContainer.innerHTML = gameHtml;
 
     const firstInput = document.querySelector('.calc-input');
