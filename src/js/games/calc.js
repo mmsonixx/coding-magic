@@ -66,7 +66,7 @@ export function initCalc() {
           break;
 
         case '/':
-          result = num2 !== 0 ? num1 / num2 : alert(`ашiбачка, введите правильные числа `);
+          result = num2 !== 0 ? num1 / num2 : alert(`На нуль ділити не можна. Введіть інакше число.`);
           break;
       }
 
