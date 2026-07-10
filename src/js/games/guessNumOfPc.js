@@ -1,5 +1,5 @@
 export function initGuessNumberGame() {
-  const gameContainer = document.querySelector('#game-12'); 
+  const gameContainer = document.querySelector('#game-2'); 
 
   if (!gameContainer) {
     return;
@@ -29,9 +29,9 @@ export function initGuessNumberGame() {
     </section>
   `;
 
-  const input = gameContainer.querySelector('[data-leap-year-input]');
-  const button = gameContainer.querySelector('[data-leap-year-button]');
-  const result = gameContainer.querySelector('[data-leap-year-result]');
+  const input = gameContainer.querySelector('[data-number-input]');
+  const button = gameContainer.querySelector('[data-number-button]');
+  const result = gameContainer.querySelector('[data-number-result]');
 
   const checkNumber = () => {
     const userGuess = Number(input.value);
