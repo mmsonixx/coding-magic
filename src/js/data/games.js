@@ -9,7 +9,7 @@ import { initOurTeam } from '../games/ourTeam.js';
 import { initTheBiggestNumber } from '../games/theBiggestNumber.js';
 import { initGameFootball } from '../games/football.js';
 import { initTicTacToe } from '../games/ticTacToe.js';
-import { initGuessNumberGame } from "../games/guessNumOfPc.js"
+import { initGuessNumberGame } from "../games/guessNumOfPc.js";
 
 
 
@@ -24,7 +24,7 @@ export const games = [
     id: 2,
     name: 'Вгадай число',
     category: 'numerical',
-    init: initTheBiggestNumber,
+    init: initGuessNumberGame,
   },
   {
     id: 3,
@@ -80,11 +80,5 @@ export const games = [
     name: 'ticTacToe ',
     category: 'game',
    init: initTicTacToe,
-  },
-  {
-    id: 12,
-    name: 'guess num of pc ',
-    category: 'game',
-    init: initGuessNumberGame,
   }
 ];
