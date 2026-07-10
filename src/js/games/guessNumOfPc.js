@@ -1,5 +1,5 @@
 export function initGuessNumberGame() {
-  const gameContainer = document.querySelector('#game-2'); 
+  const gameContainer = document.querySelector('#game-12'); 
 
   if (!gameContainer) {
     return;
@@ -26,23 +26,21 @@ export function initGuessNumberGame() {
         </div>
         <p class="guess-number__result" data-number-result></p>
       </div>
-      <div class="guess-number__divider"></div>
     </section>
   `;
 
-  const input = gameContainer.querySelector('[data-number-input]');
-  const button = gameContainer.querySelector('[data-number-button]');
-  const result = gameContainer.querySelector('[data-number-result]');
+  const input = gameContainer.querySelector('[data-leap-year-input]');
+  const button = gameContainer.querySelector('[data-leap-year-button]');
+  const result = gameContainer.querySelector('[data-leap-year-result]');
 
   const checkNumber = () => {
     const userGuess = Number(input.value);
-    
     const pcNumber = Math.floor(Math.random() * 10) + 1;
 
     if (!Number.isInteger(userGuess) || userGuess < 1 || userGuess > 10) {
       result.textContent = 'Введіть ціле число від 1 до 10!';
       result.className = 'guess-number__result is-error';
-            return;
+      return;
     }
 
     if (userGuess === pcNumber) {
@@ -60,6 +58,6 @@ export function initGuessNumberGame() {
   input.addEventListener('keydown', event => {
     if (event.key === 'Enter') {
       checkNumber();
-          }
+    }
   });
 }
