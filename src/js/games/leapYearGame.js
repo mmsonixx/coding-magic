@@ -26,7 +26,6 @@ export function initLeapYearGame() {
         </div>
         <p class="leap-year__result" data-leap-year-result></p>
       </div>
-      <div class="leap-year__divider"></div>
     </section>
   `;
 
