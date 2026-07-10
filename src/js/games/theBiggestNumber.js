@@ -26,7 +26,6 @@ export function initGuessNumberGame() {
         </div>
         <p class="guess-number__result" data-number-result></p>
       </div>
-      <div class="guess-number__divider"></div>
     </section>
   `;
 
